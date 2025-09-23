@@ -37,9 +37,9 @@ type Data = {
 const divBox = document.querySelector<HTMLDialogElement>(".box");
 const errorDiv = document.querySelector<HTMLDivElement>(".error");
 
-async function getIP() {
+/* async function getIP() {
   try {
-    const resIp = await fetch("http://ip-api.com/json/");
+    const resIp = await fetch("https://ip-api.com/json/");
     if (!resIp.ok) {
       throw new Error(`${resIp.status}`);
     }
@@ -59,13 +59,17 @@ async function getIP() {
       const p = document.createElement("p");
       p.innerText = `${err} Мы работаем над устранением проблемы.`;
       const image = document.createElement("img");
-      image.src = "./public/error.png";
+      image.src = "/error.png";
       errorDiv.appendChild(image);
       errorDiv.appendChild(p);
     }
   }
-}
-const coorsIp = await getIP();
+} */
+const coorsIp:ICoord = {
+  latitude: "12.01",
+  longitude: "20.75",
+  timezone: "Africa/Accra",
+};
 
 const params: IWheater = {
   current: [
@@ -109,7 +113,7 @@ const searchParamsTashkent = new URLSearchParams({
 
 const citieslinks = [
   {
-    cityName: coorsIp?.city,
+    cityName: "Ghana",
     link: `https://api.open-meteo.com/v1/forecast?${searchParamsIp}`,
   },
   {
@@ -143,7 +147,7 @@ async function funPromise() {
       const p = document.createElement("p");
       p.innerText = `${err} Мы работаем над устранением проблемы.`;
       const image = document.createElement("img");
-      image.src = "./public/error.png";
+      image.src = "/error.png";
       errorDiv.appendChild(image);
       errorDiv.appendChild(p);
     }
@@ -241,7 +245,7 @@ async function box() {
       const p = document.createElement("p");
       p.innerText = `${err} Мы работаем над устранением проблемы.`;
       const image = document.createElement("img");
-      image.src = "./public/error.png";
+      image.src = "/error.png";
       errorDiv.appendChild(image);
       errorDiv.appendChild(p);
     }
