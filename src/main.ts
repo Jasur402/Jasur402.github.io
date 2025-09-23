@@ -169,15 +169,15 @@ const getBox = function (box: {
         </div>
         <div class="conditions">
           <div class="div-icons-span">
-            <img class="icons" src="./public/wind.png" alt="" />
+            <img class="icons" src="/wind.png" alt="" />
             <span class="wind">${box.conditions[0]}</span>
           </div>
           <div class="div-icons-span">
-            <img class="icons" src="./public/humidity.png" alt="" />
+            <img class="icons" src="/humidity.png" alt="" />
             <span class="humidity">${box.conditions[1]}</span>
           </div>
           <div class="div-icons-span">
-            <img class="icons" src="./public/precipitacion.png" alt="" />
+            <img class="icons" src="/precipitacion.png" alt="" />
             <span class="precipitacion">${box.conditions[2]}</span>
           </div>
         </div>
