@@ -66,9 +66,9 @@ const errorDiv = document.querySelector<HTMLDivElement>(".error");
   }
 } */
 const coorsIp:ICoord = {
-  latitude: "12.01",
-  longitude: "20.75",
-  timezone: "Africa/Accra",
+  latitude: "40.710335",
+  longitude: "-73.99309",
+  timezone: "America/New_York",
 };
 
 const params: IWheater = {
@@ -113,7 +113,7 @@ const searchParamsTashkent = new URLSearchParams({
 
 const citieslinks = [
   {
-    cityName: "Ghana",
+    cityName: "New York",
     link: `https://api.open-meteo.com/v1/forecast?${searchParamsIp}`,
   },
   {
@@ -126,7 +126,7 @@ const citieslinks = [
   },
 ];
 
-async function funPromise() {
+async function functPromise() {
   try {
     const response = await Promise.all(
       citieslinks.map(async (link) => {
@@ -154,7 +154,7 @@ async function funPromise() {
   }
 }
 
-const respLinks = await funPromise();
+const respLinks = await functPromise();
 
 const getBox = function (box: {
   city: string;
