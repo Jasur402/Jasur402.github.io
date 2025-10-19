@@ -194,7 +194,6 @@ const getBox = function (box: {
 async function box() {
   try {
     respLinks?.forEach((jsonWeather: Data) => {
-      console.log(jsonWeather);
 
       const weatherCode =
         jsonWeather.current.weather_code.toString() as keyof typeof descriptions;
